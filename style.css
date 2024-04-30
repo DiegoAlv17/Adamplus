@@ -1,0 +1,101 @@
+:root{
+    --font-family: 'Roboto', sans-serif;
+    --main-color: rgba(105, 62, 112, 0.936);
+    --main-color-claro: rgba(115, 8, 132, 0.936);
+    --secondary-color: #1d031c;
+    --white-color: #ecf0f1;
+    --quaternary-color: #e74c3c;
+    --quinary-color: #3498db;
+    --buy-color: #2ecc71;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-family: var(--font-family);
+    font-size: 16px;
+
+}
+body{
+    width: 100vw;
+    background-image: linear-gradient(45deg, var(--main-color) 0%, #13161c 100%);
+
+}
+h2{
+    
+    color: var(--white-color);
+    text-align: center;
+    margin: 20px 0;
+
+}
+.cursos{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px,250px));
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 30px;
+}
+.curso{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+    background-color: var(--white-color);
+    border-radius: 5px;
+}
+.curso a{
+    text-align: center;
+    width: 100%; 
+    color: black;
+    text-decoration: none;
+    
+}
+.curso:hover{ 
+    color: var(--main-color-claro);
+    background-color: rgb(205, 173, 212);
+    width: 105%;
+    transition: 0.5s;
+    
+}
+.curso figure{
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+.curso figure img{
+    width: 100%;
+}
+.conteiner-button{
+    display: flex;
+    justify-content: end;
+    margin: 1px;
+    align-items: center;
+
+}
+.conteiner-button button{
+    background-color: var(--buy-color);
+    color: var(--white-color);
+    border: none;
+    width: 50%;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.categorias{
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: black;
+    border: 1px solid var(--main-color-claro);
+    width: 50%;
+    
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 10px;
+    transition: 0.5s;
+}		
