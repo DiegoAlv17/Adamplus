@@ -234,6 +234,7 @@ main h2{
 
 }
 .btn-pagar{
+    text-decoration: none;
     background-color: var(--buy-color);
     color: var(--white-color);
     border: none;
@@ -356,11 +357,7 @@ main h2{
 }
 
 
-footer{
-    width: 100%;
-    height: 100px;
-    background-color: var(--main-color-claro);
-}
+
 
 @media (min-width: 800px) {
     .planes{
