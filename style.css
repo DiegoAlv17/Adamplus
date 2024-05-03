@@ -2,6 +2,7 @@
     --font-family: 'Roboto', sans-serif;
     --main-color: rgba(105, 62, 112, 0.936);
     --main-color-claro: rgba(115, 8, 132, 0.936);
+    --second-color:rgb(115, 37, 189);
     --secondary-color: #1d031c;
     --white-color: #ecf0f1;
     --quaternary-color: #e74c3c;
@@ -19,7 +20,74 @@ html{
 
 }
 header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
     width: 100%;
+    
+    top: 0;
+    position: flex;
+}
+
+header .logo{
+    cursor: pointer;
+}
+
+header .logo img{
+    width: 50px;
+    transition: all 0.3s;
+}
+
+header .logo img:hover{
+    transform: scale(1.1);
+}
+nav{
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    padding: 10px 0;
+    background-color: var(--second-color);
+}
+nav .navLinks{
+    list-style: none;
+}
+
+.header .navLinks li{
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.header .navLinks li:hover{
+    transform: scale(1.1);
+}
+
+.header .navLinks a{
+    color: white;
+    text-decoration: none;
+}
+.header .navLinks li a:hover{
+    color: #13161c;
+}
+
+.header .btn {
+    font-weight: 700;
+    color: black;
+    padding: 9px 25px;
+    background: white;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0,3s ease 0s;
+    text-decoration: none;
+}
+
+.header.btn:hover{
+    transform: scale(1.1);
 }
 	
 h2{
@@ -29,6 +97,10 @@ h2{
 
 }
 .presentacion{
+    display: flex;
+    flex-direction: column;
+}
+.presentacion-img{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,7 +138,7 @@ h2{
 
 }
 .post-presentacion{
-    padding: 90px 60px;
+    padding: 52px 60px;
     width: 100%;
     font-size: 1.2rem;
     font-weight:bold;
@@ -94,7 +166,7 @@ main h2{
 }
 .nuestraDiferencias{
     display: grid;
-    grid-template-columns: repeat(2, minmax(300px,auto));
+    grid-template-columns: repeat(auto-fill, minmax(300px,auto));
     align-items: center;
     justify-content: center;
     gap: 50px;
@@ -195,7 +267,7 @@ main h2{
 }
 .planes{
     display: inline-flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 50px;
     justify-content: center;
     align-items: center;
@@ -288,4 +360,11 @@ footer{
     width: 100%;
     height: 100px;
     background-color: var(--main-color-claro);
+}
+
+@media (min-width: 800px) {
+    .planes{
+        display: flex;
+        flex-direction: row;
+    }
 }
