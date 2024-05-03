@@ -57,24 +57,24 @@ nav .navLinks{
     list-style: none;
 }
 
-.header .navLinks li{
+header .navLinks li{
     display: inline-block;
     padding: 0 20px;
 }
 
-.header .navLinks li:hover{
+header .navLinks li:hover{
     transform: scale(1.1);
 }
 
-.header .navLinks a{
+header .navLinks a{
     color: white;
     text-decoration: none;
 }
-.header .navLinks li a:hover{
+header .navLinks li a:hover{
     color: #13161c;
 }
 
-.header .btn {
+header .btn {
     font-weight: 700;
     color: black;
     padding: 9px 25px;
@@ -86,7 +86,7 @@ nav .navLinks{
     text-decoration: none;
 }
 
-.header.btn:hover{
+header.btn:hover{
     transform: scale(1.1);
 }
 	
