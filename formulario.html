@@ -10,14 +10,14 @@
     <div class="wrapper">
         <h1>Formulario de Pago</h1>
         <br>
-        <form action="/index.html" method="get">
+        <form id="paymentForm" action="index.html" method="get">
             <div class="input-box">
-                <input type="text" id="nombre" name="nombre" placeholder="Nombres" required>
-                <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombres" onkeypress="letras()">
+                <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" onkeypress="letras()">
             </div>
 
             <div class="input-box">
-                <input type="text" id="numero" name="numero" placeholder="Número de Tarjeta" pattern="[0-9]{16}" required>
+                <input type="text" id="numero" name="numero" placeholder="Número de Tarjeta" maxlength="16" onkeypress="numero2()">
             </div>
 
             <div class="input-box">
@@ -25,12 +25,12 @@
             </div>
 
             <div class="input-box">
-                <input type="text" id="cvv" name="cvv" placeholder="CVV" pattern="[0-9]{3}" required>
+                <input type="text" id="cvv" name="cvv" placeholder="CVV" maxlength="3" onkeypress="numero2()">
             </div>
 
             <div class="input-box">
                 <input type="text" id="direccion" name="direccion" placeholder="Dirección" required>
-                <input type="text" id="pais" name="pais" placeholder="País" required>
+                <input type="text" id="pais" name="pais" placeholder="País" onkeypress="letras()">
             </div>
 
             <div class="input-box">
@@ -40,5 +40,6 @@
             <input type="submit" class="btn" value="Pagar">
         </form>
     </div>
+    <script src="./JavaScript/Formulario.js"></script>
 </body>
 </html>

@@ -3,30 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Login y Registro</title>
     <link rel="stylesheet" href="./styleLogin.&Regis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <div class="wrapper">
-        <form action="/index.html">
-          <h1>Login</h1>
-          <div class="input-box">
-            <input type="text" placeholder="Correo Electronico" required>
-            <i class='bx bxs-user'></i>
-          </div>
-          <div class="input-box">
-            <input type="password" placeholder="Contraseña" required>
-            <i class='bx bxs-lock-alt' ></i>
-          </div>
-          <div class="remember-forgot">
-            <label><input type="checkbox">Recordatorio</label>
-            <a href="#">¿Has olvidado tu contraseña?</a>
-          </div>
-          <button type="submit" class="btn">Login</button>
-          <div class="register-link">
-            <p>¿No tienes cuenta? <a href="./Registrar.html">Registrate</a></p>
-          </div>
-        </form>
-      </div>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="./index.html">
+                <h1>Crear una cuenta</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>o usa tu correo electrónico para registrarte</span>
+                <input type="text" placeholder="Nombre" name="name" required />
+                <input type="email" placeholder="Correo Electronico" name="email" required />
+                <input type="password" placeholder="Contraseña" name="password" required />
+				<br>
+                <button type="submit">Crear una cuenta</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="./index.html">
+                <h1>Bienvenido a Adam+</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>o usa tu cuenta</span>
+                <input type="email" placeholder="Correo Electronico" name="email" required />
+                <input type="password" placeholder="Contraseña" name="password" required />
+                <a href="#">¿Olvidaste tu contraseña?</a>
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>¡Bienvenido de nuevo!</h1>
+                    <p>Para mantenerse conectado con nosotros, inicie sesión con su información personal</p>
+                    <button class="ghost" id="signIn">Iniciar Sesión</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>¡Hola, Amigo!</h1>
+                    <p>Ingresa tus datos personales y comienza la aventura con nosotros.</p>
+                    <button class="ghost" id="signUp">Registrate</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./JavaScript/Login.js"></script>
 </body>
 </html>
+
