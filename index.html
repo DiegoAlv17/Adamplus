@@ -11,6 +11,7 @@
 </head>
 
 
+
 <body>
     <header class="header">
         <nav>
@@ -22,7 +23,7 @@
                 <li><a href="#planesL">Planes</a></li>
                 <li><a href="#presentL">Sobre Nosotros</a></li>
             </ul>
-            <a href="./login.html" class="btn">INGRESAR</a>
+            <a onclick="openLogin()" class="btn">INGRESAR</a>
         </nav>
         <section class="presentacion">
             <article class="presentacion-img">
@@ -198,6 +199,12 @@
             </div>
         </div>
     </footer>
+    <script type="text/javascript">
+    function openLogin() {
+        window.open("login.html");
+    }
+    </script>
 </body>
+
 
 </html>

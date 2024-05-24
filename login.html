@@ -6,11 +6,12 @@
     <title>Login y Registro</title>
     <link rel="stylesheet" href="./styleLogin.&Regis.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </head>
 <body>
     <div class="container" id="container">
         <div class="form-container sign-up-container">
-            <form action="./index.html">
+            <form id="registroForm">
                 <h1>Crear una cuenta</h1>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -18,15 +19,15 @@
                     <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                 </div>
                 <span>o usa tu correo electrónico para registrarte</span>
-                <input type="text" placeholder="Nombre" name="name" required />
-                <input type="email" placeholder="Correo Electronico" name="email" required />
-                <input type="password" placeholder="Contraseña" name="password" required />
+                <input type="text" placeholder="Nombre" name="name" id="txtNombre" required />
+                <input type="email" placeholder="Correo Electronico" name="email" id="txtCorreo" required />
+                <input type="password" placeholder="Contraseña" name="password" id="txtContra" required />
 				<br>
-                <button type="submit">Crear una cuenta</button>
+                <button type="submit" onclick="register()">Crear una cuenta</button>
             </form>
         </div>
         <div class="form-container sign-in-container">
-            <form action="./index.html">
+            <form id="loginForm">
                 <h1>Bienvenido a Adam+</h1>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -34,10 +35,11 @@
                     <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                 </div>
                 <span>o usa tu cuenta</span>
-                <input type="email" placeholder="Correo Electronico" name="email" required />
-                <input type="password" placeholder="Contraseña" name="password" required />
+                <input type="email" placeholder="Correo Electronico" name="email" id="txtCorreoL" required />
+                <input type="password" placeholder="Contraseña" name="password" id="txtContraL" required />
+                <label id="txtIntentos" style="color: red;"></label>
                 <a href="#">¿Olvidaste tu contraseña?</a>
-                <button type="submit">Iniciar Sesión</button>
+                <button type="button" onclick="login()">Iniciar Sesión</button>
             </form>
         </div>
         <div class="overlay-container">
