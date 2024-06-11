@@ -57,4 +57,9 @@ function login() {
     }
 }
 
+function msjError() {
+        var msj = document.getElementById("txtIntentos");
+        msj.innerHTML = "Usuario incorrecto. Digite nuevamente";
+}
+
 

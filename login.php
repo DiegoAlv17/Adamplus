@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 </head>
+
 <body>
+    <?php
+    include_once './Controlador/UsuarioDAO2.php';
+    $obj = new UsuarioDAO2();
+    ?>
     <div class="container" id="container">
         <div class="form-container sign-up-container">
             <form id="registroForm">
@@ -22,10 +28,16 @@
                 <input type="text" placeholder="Nombre" name="name" id="txtNombre" required />
                 <input type="email" placeholder="Correo Electronico" name="email" id="txtCorreo" required />
                 <input type="password" placeholder="Contraseña" name="password" id="txtContra" required />
-				<br>
-                <button type="submit" onclick="register()">Crear una cuenta</button>
+                <br>
+                <button type="submit" name="regis">Crear una cuenta</button>
             </form>
         </div>
+        <?php
+        if (isset($_REQUEST["regis"])) {
+            $obj->adiciona($_REQUEST['name'], $_REQUEST['email'], $_REQUEST['password']);
+            echo 'alert("Usuario registrado correctamente. Por favor inicie sesión.")';
+        }
+        ?>
         <div class="form-container sign-in-container">
             <form id="loginForm">
                 <h1>Bienvenido a Adam+</h1>
@@ -37,11 +49,24 @@
                 <span>o usa tu cuenta</span>
                 <input type="email" placeholder="Correo Electronico" name="email" id="txtCorreoL" required />
                 <input type="password" placeholder="Contraseña" name="password" id="txtContraL" required />
-                <label id="txtIntentos" style="color: red;"></label>
+                <label id="txtIntentos" name="msj" style="color: red;">
+                <?php
+        if (isset($_REQUEST["log"])) {
+            if ($obj->comprueba($_REQUEST['email'], $_REQUEST['password']) != null) {
+                $vec = $obj->comprueba($_REQUEST['email'], $_REQUEST['password']);  
+                $id = $vec ->getId_usuario();
+                header("location:indexLogin.html");
+            } else {
+                    echo 'Usuario no registrado. Intente de nuevo';
+            }
+        }
+        ?>
+                </label>
                 <a href="#">¿Olvidaste tu contraseña?</a>
-                <button type="button" onclick="login()">Iniciar Sesión</button>
+                <button type="submit" name="log">Iniciar Sesión</button>
             </form>
         </div>
+
         <div class="overlay-container">
             <div class="overlay">
                 <div class="overlay-panel overlay-left">
@@ -59,5 +84,5 @@
     </div>
     <script src="./JavaScript/Login.js"></script>
 </body>
-</html>
 
+</html>

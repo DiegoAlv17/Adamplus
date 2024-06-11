@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +8,6 @@
     <script src="/JavaScript/index.js"></script>
     <title>Adam+</title>
 </head>
-
-
-
 <body>
     <header class="header">
         <nav>
@@ -21,9 +17,9 @@
             <ul class="navLinks">
                 <li><a href="#cursosL">Cursos</a></li>
                 <li><a href="#planesL">Planes</a></li>
-                <li><a href="#presentL">Sobre Nosotros</a></li>
+                <li><a href="#profesoresL">Nuestros Profesores</a></li>
             </ul>
-            <a onclick="openLogin()" class="btn">INGRESAR</a>
+            <a href="./login.php" class="btn">INGRESAR</a>
         </nav>
         <section class="presentacion">
             <article class="presentacion-img">
@@ -54,7 +50,7 @@
             <article class="diferencia">
                 <h4>Flexibilidad: </h4>
                 <p>Sabemos que tu tiempo es valioso, por lo que nuestros cursos están diseñados para adaptarse a tu
-                    horario. Accede a las lecciones cuando y donde quieras, ¡sin comprometer la calidad del aprendizaje!
+                    horario. Accede a las lecciones cuando y donde quieras.
                 </p>
             </article>
             <article class="diferencia">
@@ -67,69 +63,73 @@
                 <p>Nuestro equipo de soporte está aquí para ayudarte en cada paso del camino. Si tienes alguna pregunta
                     o necesitas orientación, no dudes en contactarnos.</p>
             </article>
+            <article class="diferencia">
+                <h4>Innovación Continua:</h4>
+                <p>En ADAM+, estamos comprometidos con la mejora constante de nuestra plataforma y nuestros cursos. Implementamos regularmente nuevas tecnologías.</p>
+            </article>            
         </section>
         <h2>CURSOS</h2>
         <section class="cursos" id="cursosL">
             <article class="curso">
-                <a href="./formulario.html">
+                <a href="./login.php">
                     <figure>
                         <img src="./img/cursoJs.jpg" alt="">
                     </figure>
                     <h1>Curso JavaScript</h1>
                     <div class="conteiner-button">
-                        <div class="categorias">Principiante</div>
+                        <div class="categorias">Presione aquí</div>
                         <button class="btn-pagar">Comprar</button>
 
                     </div>
                 </a>
             </article>
             <article class="curso">
-                <a href="./formulario.html">
+                <a href="./login.php">
                     <figure>
                         <img src="./img/cursoPhp.jpg" alt="">
                     </figure>
                     <h1>Curso PHP</h1>
                     <div class="conteiner-button">
-                        <div class="categorias">Intermedio</div>
+                        <div class="categorias">Presione aquí</div>
                         <button class="btn-pagar">Comprar</button>
 
                     </div>
                 </a>
             </article>
             <article class="curso">
-                <a href="./formulario.html">
+                <a href="./login.php">
                     <figure>
                         <img src="./img/cursohtml.jpg" alt="">
                     </figure>
                     <h1>Curso HTML</h1>
                     <div class="conteiner-button">
-                        <div class="categorias">Principiante</div>
+                        <div class="categorias">Presione aquí</div>
                         <button class="btn-pagar">Comprar</button>
 
                     </div>
                 </a>
             </article>
             <article class="curso">
-                <a href="./formulario.html">
+                <a href="./login.php">
                     <figure>
                         <img src="./img/cursoCss.jpg" alt="">
                     </figure>
                     <h1>Curso CSS</h1>
                     <div class="conteiner-button">
-                        <div class="categorias">Principiante</div>
+                        <div class="categorias">Presione aquí</div>
                         <button class="btn-pagar">Comprar</button>
 
                     </div>
                 </a>
             </article>
             <article class="curso">
-                <a href="./formulario.html">
+                <a href="./login.php">
                     <figure>
                         <img src="./img/cursoSqlServer.jpg" alt="">
                     </figure>
                     <h1>Curso SQL Server</h1>
                     <div class="conteiner-button">
-                        <div class="categorias">Avanzado</div>
+                        <div class="categorias">Presione aquí</div>
                         <button class="btn-pagar">Comprar</button>
 
                     </div>
@@ -143,6 +143,63 @@
                 </a>
             </article>
         </section>
+        
+        <h2> Nuestros Profesores</h2>
+<section class="profesores" id="profesoresL">
+    <article class="profesor">
+        <figure>
+            <img src="./img/JavierSantaolalla.jpg" alt="Javier Santaolalla">
+        </figure>
+        <div class="profesor-info">
+            <h3>Javier Santaolalla</h3>
+            <p>Especialista en Html.</p>
+            <div class="curso-info">
+                <i class="fa-solid fa-code"></i>
+                <span>Curso de Html</span>
+            </div>
+        </div>
+    </article>
+    <article class="profesor">
+        <figure>
+            <img src="./img/ProfesorJuan.jpg" alt="Juan Alberto González">
+        </figure>
+        <div class="profesor-info">
+            <h3>Juan Alberto González</h3>
+            <p>Especialista del lenguaje de JavaScript.</p>
+            <div class="curso-info">
+                <i class="fa-solid fa-brain"></i>
+                <span>Curso de JavaScript</span>
+            </div>
+        </div>
+    </article>
+    <article class="profesor">
+        <figure>
+            <img src="./img/profesora.jpg" alt="Estefany Aguilar">
+        </figure>
+        <div class="profesor-info">
+            <h3>Estefany Aguilar</h3>
+            <p>Especialista del lenguaje de Css.</p>
+            <div class="curso-info">
+                <i class="fa-solid fa-code"></i>
+                <span>Curso de Css</span>
+            </div>
+        </div>
+    </article>
+    <article class="profesor">
+        <figure>
+            <img src="./img/profesorcarlos.jpg" alt="Carlos Alarcón">
+        </figure>
+        <div class="profesor-info">
+            <h3>Carlos Alarcón</h3>
+            <p>Especialista en Base de Datos.</p>
+            <div class="curso-info">
+                <i class="fa-solid fa-brain"></i>
+                <span>Curso de Sql Server</span>
+            </div>
+        </div>
+    </article>
+</section>
+
         <h2>Tipo de planes</h2>
         <section class="planes" id="planesL">
 
@@ -157,7 +214,7 @@
                     <li>Actualizaciones regulares de contenido.</li>
                     <li>Comunidad de aprendizaje inclusiva.</li>
                 </ul>
-                <a href="./formulario.html" class="btn-pagar">Aquirir plan</a>
+                <a href="./login.php" class="btn-pagar">Aquirir plan</a>
             </article>
 
             <article class="planP">
@@ -171,27 +228,28 @@
                     <li>Certificados de finalización para cada curso completado.</li>
                     <li>Oportunidades de networking exclusivas </li>
                 </ul>
-                <a href="./formulario.html" class="btn-pagar">Aquirir plan</a>
+                <a href="./login.php" class="btn-pagar">Aquirir plan</a>
             </article>
         </section>
     </main>
     <footer class="footer">
         <div class="div-footer">
             <p>© Copyright Adamplus 2024</p>
+            <p><a href="Administrador\main.html">Administrador</a></p>
             <div class="div-footer-redes">
                 <ul>
                     <li class="item">
-                        <a href="/Footer/Instagram.html" target="_blank" onclick="window.open(this.href, this.target, 'width=890px,height=660px, left=380px, top=100px'); return false;">
+                        <a href="./Footer/Instagram.html" target="_blank" onclick="window.open(this.href, this.target, 'width=890px,height=660px, left=380px, top=100px'); return false;">
                             <i class="fa-brands fa-instagram icon"></i>
                         </a>
                     </li>
                     <li class="item">
-                        <a href="/Footer/Linkedin.html" target="_blank" onclick="window.open(this.href, this.target, 'width=890px,height=660px, left=380px, top=100px'); return false;">
+                        <a href="./Footer/Linkedin.html" target="_blank" onclick="window.open(this.href, this.target, 'width=890px,height=660px, left=380px, top=100px'); return false;">
                             <i class="fa-brands fa-linkedin icon"></i>
                         </a>
                     </li>
                     <li class="item">
-                        <a href="/Footer/Youtube.html" target="_blank" onclick="window.open(this.href, this.target, 'width=890px,height=660px, left=380px, top=100px'); return false;">
+                        <a href="./Footer/Youtube.html" target="_blank" onclick="window.open(this.href, this.target, 'width=890px,height=660px, left=380px, top=100px'); return false;">
                             <i class="fa-brands fa-youtube icon"></i>
                         </a>
                     </li>
